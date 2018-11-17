@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7091b44cdeed06f45b54009097545a60, type: 3}
+  m_Name: Pool
+  m_EditorClassIdentifier: 
+  GradeKey: pool_key
+  LabelKeyEng: Pool
+  LabelKeyRu: "\u0411\u0430\u0441\u0441\u0435\u0439\u043D"
+  DescriptionKeyEng:
+  - Pool0
+  - Pool1
+  - Pool2
+  - Pool3
+  - Pool4
+  DescriptionKeyRu:
+  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D0"
+  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D1"
+  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D2"
+  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D3"
+  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D4"
+  GradeImages:
+  - {fileID: 21300000, guid: 35f184f979a1f1142afe7a7b05f958da, type: 3}
+  - {fileID: 21300000, guid: 169e5135e203a6c478e11288d70ef8f8, type: 3}
+  - {fileID: 21300000, guid: a29dc13aac935454c8c103205e36ad83, type: 3}
+  - {fileID: 21300000, guid: 142b58d9b2bc25544ab8b09954ad9a74, type: 3}
+  - {fileID: 21300000, guid: bfacdc6a425fd5b458b20b7da17834e5, type: 3}
+  CurrentGradeID: 0
+  GradeCost: 000000000a000000140000001e00000028000000

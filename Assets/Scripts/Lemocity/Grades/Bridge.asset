@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7091b44cdeed06f45b54009097545a60, type: 3}
+  m_Name: Bridge
+  m_EditorClassIdentifier: 
+  GradeKey: bridge_key
+  LabelKeyEng: Bridge
+  LabelKeyRu: "\u041C\u043E\u0441\u0442"
+  DescriptionKeyEng:
+  - Bridge0
+  - Bridge1
+  - Bridge2
+  - Bridge3
+  - Bridge4
+  DescriptionKeyRu:
+  - "\u041C\u043E\u0441\u04420"
+  - "\u041C\u043E\u0441\u04421"
+  - "\u041C\u043E\u0441\u04422"
+  - "\u041C\u043E\u0441\u04423"
+  - "\u041C\u043E\u0441\u04424"
+  GradeImages:
+  - {fileID: 21300000, guid: 589aef592d30f2f41ad6e7be6c4ae0ed, type: 3}
+  - {fileID: 21300000, guid: 22afb45a417aebf4e82c0b211f9a26fe, type: 3}
+  - {fileID: 21300000, guid: 693152be4a7ec8642b72824ccd45d95b, type: 3}
+  - {fileID: 21300000, guid: 7861da406352f4e429f090d00bb160a2, type: 3}
+  - {fileID: 21300000, guid: 18fcb782dd2271a47988ec42290d3fe4, type: 3}
+  CurrentGradeID: 0
+  GradeCost: 000000000a000000140000001e00000028000000

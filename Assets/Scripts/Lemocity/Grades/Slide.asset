@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7091b44cdeed06f45b54009097545a60, type: 3}
+  m_Name: Slide
+  m_EditorClassIdentifier: 
+  GradeKey: slide_key
+  LabelKeyEng: Slide
+  LabelKeyRu: "\u0413\u043E\u0440\u043A\u0430"
+  DescriptionKeyEng:
+  - Slide0
+  - Slide1
+  - Slide2
+  - Slide3
+  - Slide4
+  DescriptionKeyRu:
+  - "\u0413\u043E\u0440\u043A\u04300"
+  - "\u0413\u043E\u0440\u043A\u04301"
+  - "\u0413\u043E\u0440\u043A\u04302"
+  - "\u0413\u043E\u0440\u043A\u04303"
+  - "\u0413\u043E\u0440\u043A\u04304"
+  GradeImages:
+  - {fileID: 21300000, guid: c3bfea7ec643ca7498f347fb285c09cf, type: 3}
+  - {fileID: 21300000, guid: 47a5866ba481f98478af0f8ac7818155, type: 3}
+  - {fileID: 21300000, guid: 63508997c2dda314e88d7162ebffa19a, type: 3}
+  - {fileID: 21300000, guid: 37d2ec282a3f15b46ad1cbfbe2a1d03a, type: 3}
+  - {fileID: 21300000, guid: 01846092858a969498a2a2214259df07, type: 3}
+  CurrentGradeID: 0
+  GradeCost: 000000000a000000140000001e00000028000000

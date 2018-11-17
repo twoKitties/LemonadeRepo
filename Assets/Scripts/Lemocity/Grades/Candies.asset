@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7091b44cdeed06f45b54009097545a60, type: 3}
+  m_Name: Candies
+  m_EditorClassIdentifier: 
+  GradeKey: candies_key
+  LabelKeyEng: Candies
+  LabelKeyRu: "\u041A\u043E\u043D\u0444\u0435\u0442\u044B"
+  DescriptionKeyEng:
+  - Candies0
+  - Candies1
+  - Candies2
+  - Candies3
+  - Candies4
+  DescriptionKeyRu:
+  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B0"
+  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B1"
+  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B2"
+  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B3"
+  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B4"
+  GradeImages:
+  - {fileID: 21300000, guid: 3f023c4bb0a2e5243980c8c0d1427c95, type: 3}
+  - {fileID: 21300000, guid: a4bcc259643833043ac8b057164fc207, type: 3}
+  - {fileID: 21300000, guid: 46e8bbf2e26969b429624cb52eb96aea, type: 3}
+  - {fileID: 21300000, guid: 51187a331326c9a428ef2b1c78663a6a, type: 3}
+  - {fileID: 21300000, guid: 4b0748f8ea8310d44a5d4a0e12c0a4ae, type: 3}
+  CurrentGradeID: 0
+  GradeCost: 000000000a000000140000001e00000028000000
