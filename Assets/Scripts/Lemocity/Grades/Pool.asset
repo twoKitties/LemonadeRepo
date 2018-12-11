@@ -15,17 +15,17 @@ MonoBehaviour:
   LabelKeyEng: Pool
   LabelKeyRu: "\u0411\u0430\u0441\u0441\u0435\u0439\u043D"
   DescriptionKeyEng:
-  - Pool0
-  - Pool1
-  - Pool2
-  - Pool3
-  - Pool4
+  - pool
+  - orange pool
+  - pool with soda
+  - acid puddle
+  - sweet well
   DescriptionKeyRu:
-  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D0"
-  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D1"
-  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D2"
-  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D3"
-  - "\u0411\u0430\u0441\u0441\u0435\u0439\u043D4"
+  - "\u0431\u0430\u0441\u0441\u0435\u0439\u043D"
+  - "\u0430\u043F\u0435\u043B\u044C\u0441\u0438\u043D\u043E\u0432\u044B\u0439 \u0431\u0430\u0441\u0441\u0435\u0439\u043D"
+  - "\u0431\u0430\u0441\u0441\u0435\u0439\u043D \u0441 \u0448\u0438\u043F\u0443\u0447\u043A\u043E\u0439"
+  - "\u043A\u0438\u0441\u043B\u043E\u0442\u043D\u0430\u044F \u043B\u0443\u0436\u0430"
+  - "\u0441\u043B\u0430\u0434\u043A\u0438\u0439 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A"
   GradeImages:
   - {fileID: 21300000, guid: 35f184f979a1f1142afe7a7b05f958da, type: 3}
   - {fileID: 21300000, guid: 169e5135e203a6c478e11288d70ef8f8, type: 3}
@@ -33,4 +33,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 142b58d9b2bc25544ab8b09954ad9a74, type: 3}
   - {fileID: 21300000, guid: bfacdc6a425fd5b458b20b7da17834e5, type: 3}
   CurrentGradeID: 0
-  GradeCost: 000000000a000000140000001e00000028000000
+  GradeCost: 000000001e00000050000000b40000005e010000

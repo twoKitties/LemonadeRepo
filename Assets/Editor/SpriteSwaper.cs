@@ -55,14 +55,13 @@ public class SpriteSwaper : EditorWindow
         // Check to see if folder you wish to drop them in exists. 
         // REFERENCE YOUR FOLDER STRUCTURE HERE
         // OTHERWISE IT WILL CREATE NEW ONE WITH SPECIFIED NAME
-        string path = "Assets/GameResources/Animations/GameTileBursts_new";
-        if(!AssetDatabase.IsValidFolder(path + tex.name))
-            AssetDatabase.CreateFolder(path, tex.name);
+        string path = "Assets/_Test/Animation";
+        //if(!AssetDatabase.IsValidFolder(path + "/" + tex.name))
+        //    AssetDatabase.CreateFolder(path, tex.name);
 
         // Copies original animation clip and assignes it to a retrieves the copied animation clip
-        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(clip), path + tex.name + "/" + tex.name + clip.name + ".anim");
-        clonedClip = (AnimationClip)AssetDatabase.LoadAssetAtPath(path + tex.name + "/" + tex.name + clip.name + ".anim", typeof(AnimationClip));
-
+        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(clip), path + "/" + tex.name + ".anim");
+        clonedClip = (AnimationClip)AssetDatabase.LoadAssetAtPath(path + "/" + tex.name + ".anim", typeof(AnimationClip));
         // CHECKED WITH JUST SPRITE ANIMATIONS!
         // Gets the binding for object curves
         foreach (var binding in AnimationUtility.GetObjectReferenceCurveBindings(clonedClip))
@@ -73,9 +72,14 @@ public class SpriteSwaper : EditorWindow
             {
                 // Get the "_#" from the original sprite  ImageA_01 gets 01
                 splitName = keyframes[i].value.name.Split('_');
+                Debug.Log("keyframe.value.name " + keyframes[i].value.name);
                 // Uses LINQ to capture the sprite on from the sprite array we created earlier and sets the keyframe value to the new sprite
-
+                keyframes[i].value = sprites.Where(x => x.name.Contains("_" + splitName[1])).First();
             }
+            // Assigns the curve to the new animation clip
+            AnimationUtility.SetObjectReferenceCurve(clonedClip, binding, keyframes);
         }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 }

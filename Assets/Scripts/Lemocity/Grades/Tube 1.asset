@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7091b44cdeed06f45b54009097545a60, type: 3}
+  m_Name: Tube 1
+  m_EditorClassIdentifier: 
+  GradeKey: tube_1_key
+  LabelKeyEng: Tubes
+  LabelKeyRu: "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  DescriptionKeyEng:
+  - tubes
+  - jelly tubes
+  - waffle tubes
+  - caramel tubes
+  - sweet-sweet tubes
+  DescriptionKeyRu:
+  - "\u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0436\u0435\u043B\u0435\u0439\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0432\u0430\u0444\u0435\u043B\u044C\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u043A\u0430\u0440\u0430\u043C\u0435\u043B\u044C\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0442\u0440\u0443\u0431\u043A\u0438 \u0441\u043B\u0430\u0441\u0442\u0435\u043D\u044B"
+  GradeImages:
+  - {fileID: 21300000, guid: 2127680b065d09d4285b053f52764da6, type: 3}
+  - {fileID: 21300000, guid: 7c0529e0b31e20049b4f0499145fef58, type: 3}
+  - {fileID: 21300000, guid: 7616418f04f7cc944bbf2b4b757de916, type: 3}
+  - {fileID: 21300000, guid: 0c99b33b55a36454f87469fdb5a466d8, type: 3}
+  - {fileID: 21300000, guid: 740831a9932c674459a10809e34e0556, type: 3}
+  CurrentGradeID: 0
+  GradeCost: 000000001400000032000000780000002c010000

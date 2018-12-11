@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 212086837856574434}
   - component: {fileID: 199306496341360460}
   - component: {fileID: 198445834846172566}
+  - component: {fileID: 95585365461270932}
   m_Layer: 0
   m_Name: GameTileYellow3
   m_TagString: Untagged
@@ -308,6 +309,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &95585365461270932
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382237668533172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31957c6e762bca745a7039460c36af94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114263731413343542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,8 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41d46eff16273f44a7c80576099b9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damp: 0.3
-  maxSpeed: 20
+  damp: 0.25
+  maxSpeed: 25
 --- !u!114 &114654121386183796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,6 +376,8 @@ MonoBehaviour:
   isDragged: 0
   isResetting: 0
   IsStopped: 0
+  bubbleEmitter: {fileID: 1388209649992738, guid: f907efaec1227b64493eece28173e908,
+    type: 2}
 --- !u!198 &198051946398934442
 ParticleSystem:
   m_ObjectHideFlags: 1

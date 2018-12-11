@@ -123,7 +123,7 @@ PlayerSettings:
     16:10: 0
     16:9: 0
     Others: 1
-  bundleVersion: 1.06
+  bundleVersion: 1.07
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -154,7 +154,7 @@ PlayerSettings:
   buildNumber:
     Standalone: 9
     iOS: 1
-  AndroidBundleVersionCode: 10
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -613,7 +613,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Build: 1
-    Collab: 0
+    Collab: 1
     ErrorHub: 0
     Hub: 0
     UNet: 1
@@ -621,7 +621,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 26b8c925-381a-4019-b6d7-41953fa83dd2
   projectName: Lemonade
-  organizationId: kitties
+  organizationId: arise-llc
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

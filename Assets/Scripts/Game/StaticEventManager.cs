@@ -19,12 +19,12 @@ public static class StaticEventManager
             OnGameLose();
     }
 
-    public static event Action OnTileDead;
+    public static event Action<int> OnTileDead;
 
-    public static void CallOnTileDead()
+    public static void CallOnTileDead(int bonusAmount)
     {
         if (OnTileDead != null)
-            OnTileDead();
+            OnTileDead(bonusAmount);
     }
 
     /// <summary>

@@ -18,11 +18,16 @@ namespace LemonadeStore
         [SerializeField]
         private Button[] GradeButtons;
         [SerializeField]
+        private Button[] testDecorationButtons;
+        [SerializeField]
         private Button UpgradeButton;
         [SerializeField]
         private Text Cost;
         [SerializeField]
         private Text AllPoints;
+
+        private bool testButtonsActive;
+        public bool TestButtonsActive { get { return testButtonsActive; } }
 
         public void SetButtonImages(Sprite sprite, int buttonID)
         {
@@ -62,12 +67,32 @@ namespace LemonadeStore
                 GradeButtons[i].interactable = !buttonStates[i + 1];
             }
         }
+        #region TestDecorationButtons
+        public void ActivateDecorationButtons(bool activate)
+        {
+            for (int i = 0; i < testDecorationButtons.Length; i++)
+                testDecorationButtons[i].gameObject.SetActive(activate);
+            testButtonsActive = activate;
+        }
+        public void SetDecorationButtonsInteractive(bool[] states)
+        {
+            for (int i = 0; i < testDecorationButtons.Length; i++)
+                testDecorationButtons[i].interactable = states[i + 1];
+        }
+        // SetDecorationButtonsWithImages(
+        public void SetDecorationButtonsWithImages(Sprite[] sprites)
+        {
+            for (int i = 0; i < testDecorationButtons.Length; i++)
+                testDecorationButtons[i].GetComponent<Image>().sprite = sprites[i];
+        }
+        #endregion
         [SerializeField]
         private Color blinkColor;
         [SerializeField]
         private Color defaultColor;
 
-        private IEnumerator Blink()
+        public delegate void OpenWindowCallback();
+        private IEnumerator Blink(OpenWindowCallback callback)
         {
             float maxTime = 1f;
             float time = Time.deltaTime;
@@ -85,10 +110,11 @@ namespace LemonadeStore
                 AllPoints.color = Color.Lerp(blinkColor, defaultColor, perc);
                 Cost.color = Color.Lerp(blinkColor, defaultColor, perc);
             }
+            callback();
         }
-        public void CallBlink()
+        public void CallBlink(OpenWindowCallback callback)
         {
-            StartCoroutine(Blink());
+            StartCoroutine(Blink(callback));
         }
     }
 }

@@ -5,6 +5,7 @@ using LemonadeStore;
 
 public class GameController : MonoBehaviour
 {
+    public static bool IsTutorActive = false;
     private GameObject boardManager;
     private BoardController boardController;
     private GameTileManager gameTileManager;
@@ -12,7 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private ShopController shopController;
     [SerializeField]
-    private TutorialController tutorialController;
+    private TutorialManager tutorialController;
     private BGColors currentColor
     {
         get
@@ -96,13 +97,13 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (exitDialogue.activeSelf)
-                exitDialogue.SetActive(false);
-            else
-                exitDialogue.SetActive(true);
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    if (exitDialogue.activeSelf)
+        //        exitDialogue.SetActive(false);
+        //    else
+        //        exitDialogue.SetActive(true);
+        //}
 
         if (isPaused)
             Time.timeScale = 0f;
@@ -119,9 +120,25 @@ public class GameController : MonoBehaviour
     {
         boardController.enabled = true;
         gameTileManager.enabled = true;
-        boardController.Initialize();
+        if (AdsController.gameStartsCount == 0)
+        {
+            tutorialController.gameObject.SetActive(true);
+            boardController.InitializeTutorial();
+            // Gets link to PauseButton of gameScreen
+            Button pauseButton = gameScreen.transform.GetChild(0).GetComponent<Button>();
+            pauseButton.interactable = false;
+            // Gets link to bottleButton of gameScreen
+            Button bottleButton = gameScreen.transform.GetChild(2).GetChild(0).GetComponent<Button>();
+            bottleButton.interactable = false;
+        }
+        else
+            boardController.Initialize();
         startScreen.SetActive(false);
         gameScreen.SetActive(true);
+
+        points = 0;
+        if (pointsBoardText.text != null)
+            pointsBoardText.text = points.ToString();
 
         int firstLockedItemIndex = shopController.GetFirstLockedIndex();
         StaticEventManager.CallOnBottleImageRefresh(firstLockedItemIndex);
@@ -134,20 +151,12 @@ public class GameController : MonoBehaviour
 
         // Here goes tutorial activation code
         // Enables on first launch of the game
-
-        if(AdsController.gameStartsCount < 1)
-        {
-            tutorialController.gameObject.SetActive(true);
-
-            Button pauseButton = gameScreen.transform.GetChild(0).GetComponent<Button>();
-            pauseButton.interactable = false;
-            Button bottleButton = gameScreen.transform.GetChild(2).GetChild(0).GetComponent<Button>();
-            bottleButton.interactable = false;
-
-            isPaused = true;
-        }
     }
 
+    public void SetPause(bool state)
+    {
+        isPaused = state;
+    }
     public void EndTutorial()
     {
         Button pauseButton = gameScreen.transform.GetChild(0).GetComponent<Button>();
@@ -224,7 +233,7 @@ public class GameController : MonoBehaviour
 
         StaticEventManager.CallOnMenuEnter();
     }
-    public void GoToLemoncity()
+    public void OpenLemoncityFromGame()
     {
         boardController.ResetBoard(true);
         boardController.enabled = false;
@@ -233,7 +242,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        startScreen.SetActive(true);
+        startScreen.SetActive(false);
         settingsScreen.SetActive(false);
         gameScreen.SetActive(false);
         pauseScreen.SetActive(false);
@@ -247,7 +256,13 @@ public class GameController : MonoBehaviour
     }
     public void OpenLemoncity()
     {
+        startScreen.SetActive(false);
         lemoncityController.OpenLemoncityWindow();
+    }
+    public void CloseLemoncity()
+    {
+        startScreen.SetActive(true);
+        lemoncityController.CloseLemoncityWindow();
     }
     public void OpenPauseScreen()
     {
@@ -309,26 +324,37 @@ public class GameController : MonoBehaviour
         shopScreen.SetActive(false);
     }
 
-    private void AddPoints()
+    private void AddPoints(int bonusAmount)
     {
-        points += 100;
+        int multiplier = (CandyMultiplier.IsActive) ? 2 : 1;
+        points += 1 * multiplier + bonusAmount;
         if (lemoncityController != null)
-            lemoncityController.Points += 1;
+            lemoncityController.Points += 1 * multiplier + bonusAmount;
         
         if (pointsBoardText.text != null)
             pointsBoardText.text = points.ToString();
-        if (points % 5000 == 0)
+        if (points % 50 == 0)
             boardController.SetGameTilesSpeed();
-        if(points % 5000 == 0)
+        if(points % 50 == 0)
             boardController.SetDifficulty();
 
-        if (points == 5000)        
+        if (points == 100)
             shopController.SetNewBackground(1);
-        else if (points == 10000)
+        else if (points == 150)
             shopController.SetNewBackground(2);
-        else if (points == 15000)
+        else if (points == 200)
             shopController.SetNewBackground(3);
-        else if (points == 20000)
+        else if (points == 210)
             shopController.SetNewBackground(4);
+        else if (points == 220)
+            shopController.SetNewBackground(5);
+        else if (points == 230)
+            shopController.SetNewBackground(6);
+        else if (points == 250)
+            shopController.SetNewBackground(7);
+        else if (points == 260)
+            shopController.SetNewBackground(8);
+        else if (points == 270)
+            shopController.SetNewBackground(9);
     }
 }

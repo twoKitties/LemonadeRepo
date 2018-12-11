@@ -69,11 +69,17 @@ public class GameTile : MonoBehaviour
     [HideInInspector]
     public bool IsStopped;
 
+    private Animator anim;
+    [SerializeField]
+    private GameObject bubbleEmitter;
+
     private void Start()
     {
         boardGenerator = FindObjectOfType<BoardController>();
-        psMark = controlMark.GetComponent<ParticleSystem>();
         UpdateTileCoords();
+        psMark = controlMark.GetComponent<ParticleSystem>();
+        anim = GetComponent<Animator>();
+
         Initialize();
         if (Y == 7 && boardGenerator.Tiles[X,Y - 1].isSolid)
         {
@@ -85,6 +91,8 @@ public class GameTile : MonoBehaviour
             controller = GetComponent<InputController>();
             controller.enabled = true;
         }
+
+        // Test
     }
 
     private void OnApplicationQuit()
@@ -102,12 +110,21 @@ public class GameTile : MonoBehaviour
 
     private void DestroyTile()
     {
-        StaticEventManager.CallOnTileDead();
+        int bonusPoints = 0;
+        if (HasRowBonus || HasColumnBonus)
+            bonusPoints = 1;
+        if (HasSuperBonus)
+            bonusPoints = 2;
+        StaticEventManager.CallOnTileDead(bonusPoints);
         Instantiate(gameTileBurst, transform.position, Quaternion.identity);
         //StaticEventManager.CallOnTileDestroy(this);
         SoundPlayer.Play("tiledeath", 1);
     }
-
+    public void SetTileCoords(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
     private void SetGameTileColor()
     {
         switch (tileColor)
@@ -225,6 +242,14 @@ public class GameTile : MonoBehaviour
         HasSuperBonus = true;
         bonusSuper.SetActive(true);
         SoundPlayer.Play("bonus", 1);
+    }
+    public void PlayHitAnimation()
+    {
+        float r = Random.Range(-90f, 90f);
+        Quaternion rotation = Quaternion.Euler(0, 0, r);
+        transform.rotation = rotation;
+        Debug.Log("animation hit activated");
+        Instantiate(bubbleEmitter, transform.position, Quaternion.identity);
     }
     //private void OnMouseDown()
     //{

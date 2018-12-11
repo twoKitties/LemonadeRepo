@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Name: HomeUp
   m_EditorClassIdentifier: 
   GradeKey: homeup_key
-  LabelKeyEng: Home
-  LabelKeyRu: "\u0414\u043E\u043C"
+  LabelKeyEng: castle
+  LabelKeyRu: "\u0437\u0430\u043C\u043E\u043A"
   DescriptionKeyEng:
-  - Home0
-  - Home1
-  - Home2
-  - Home3
-  - Home4
+  - muffin
+  - muffin
+  - cake
+  - cake castle
+  - magic castle
   DescriptionKeyRu:
-  - "\u0414\u043E\u043C0"
-  - "\u0414\u043E\u043C1"
-  - "\u0414\u043E\u043C2"
-  - "\u0414\u043E\u043C3"
-  - "\u0414\u043E\u043C4"
+  - "\u043A\u0435\u043A\u0441"
+  - "\u043A\u0435\u043A\u0441"
+  - "\u0442\u043E\u0440\u0442\u0438\u043A"
+  - "\u0442\u043E\u0440\u0442 \u0437\u0430\u043C\u043E\u043A"
+  - "\u0432\u043E\u043B\u0448\u0435\u0431\u043D\u044B\u0439 \u0437\u0430\u043C\u043E\u043A"
   GradeImages:
   - {fileID: 21300000, guid: e3bd4d6050491cb41bdb289484846371, type: 3}
   - {fileID: 21300000, guid: baa9ec8ad4bc1c041993b4476e392dea, type: 3}
@@ -33,4 +33,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 350f4a9e4b1da7b4eba10a71704bc361, type: 3}
   - {fileID: 21300000, guid: 6176748383f0bf34993817b577f815d5, type: 3}
   CurrentGradeID: 0
-  GradeCost: 000000000a000000140000001e00000028000000
+  GradeCost: 0000000090010000e8030000d0070000a00f0000

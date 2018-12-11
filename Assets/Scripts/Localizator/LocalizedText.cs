@@ -12,14 +12,24 @@ public class LocalizedText : MonoBehaviour {
     private void Awake()
     {
         UILocalizationRefresher.OnLanguageChange += RefreshText;
+        if (text == null)
+            text = GetComponent<Text>();
     }
-
     private void Start()
     {
-        text = GetComponent<Text>();
+        if (text == null)
+            text = GetComponent<Text>();
+    }
+    private void OnEnable()
+    {
+        if (text == null)
+            text = GetComponent<Text>();
         text.text = LocalizationManager.Instance.GetLocalizedValue(key);
     }
-
+    private void OnDisable()
+    {
+        UILocalizationRefresher.OnLanguageChange -= RefreshText;
+    }
     private void OnDestroy()
     {
         UILocalizationRefresher.OnLanguageChange -= RefreshText;

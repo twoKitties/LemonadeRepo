@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "896628353669",
+    "firebase_url": "https://lemonade-581a2.firebaseio.com",
+    "project_id": "lemonade-581a2",
+    "storage_bucket": "lemonade-581a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896628353669:android:56fe2cdc3cab561c",
+        "android_client_info": {
+          "package_name": "com.AriseLLC.Lemonade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896628353669-95djthh4ge0k7i5u0gfqj2lv7d6nqkt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN9kNyfeLvg7yUuL40SFUjHg0imiD_dY4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -15,8 +15,8 @@ public class GameTileManager : MonoBehaviour
 
     private void Update()
     {
-        //if(boardController.GameState == GameStateStatus.TilesMoving)
-        MoveTiles();
+        if (boardController.GameState != GameStateStatus.EffectsWorking)
+            MoveTiles();
     }
 
     private void MoveTiles()
@@ -24,13 +24,16 @@ public class GameTileManager : MonoBehaviour
         int count = gameTiles.Count;
         foreach (var item in gameTiles)
         {
+            //Debug.Log("item firstrow " + item.IsFirstRow + " ," + "dragged " + item.isDragged + " ," + "resetting " + item.isResetting);
             if(!item.IsFirstRow && !item.isDragged && !item.isResetting)
             {
+                //Debug.Log("there are tiles to move");
                 GameTile lowerTile = gameTiles.Find(coords => coords.X == item.X && coords.Y == item.Y - 1 && !coords.isDragged);
                 if (lowerTile == null)
                 {
                     if (item.Y == 0 && item.currentLerpTime == 0)
                     {
+                        //Debug.Log("item stopped " + "XY " + item.X + " " + item.Y);
                         item.IsMoving = false;
                         item.IsFirstRow = true;
                         boardController.Tiles[item.X, item.Y].color = item.tileColor;
@@ -59,6 +62,7 @@ public class GameTileManager : MonoBehaviour
                     {
                         if (item.IsControllable && !lowerTile.IsMoving)
                         {
+                            //Debug.Log("this shit");
                             item.DisableControlledUnit();
                         }
                         if (item.Y < 7 && item.IsMoving)

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9e76a9da5c5854ea071be730b29ebf, type: 3}
+  m_Name: Stars
+  m_EditorClassIdentifier: 
+  DecorSetKey: stars_key
+  Icons:
+  - {fileID: 21300000, guid: c039709fdb3ba9f4eaf916107ff30795, type: 3}
+  - {fileID: 21300000, guid: d30781909aa81aa48aa961f147a4efd4, type: 3}
+  - {fileID: 21300000, guid: c2c9e08108e43de4186875863fceab8e, type: 3}
+  - {fileID: 21300000, guid: edaf8952aed5e0c4f8b74bcb40acdf48, type: 3}
+  IconsLocked:
+  - {fileID: 21300000, guid: 9661f772b8cd6694aaa3551d58f9dda2, type: 3}
+  - {fileID: 21300000, guid: b6b1b92f1e1507b4e8005c3f3fd29470, type: 3}
+  - {fileID: 21300000, guid: 7e391c4a2feb15344abac438f377066d, type: 3}
+  - {fileID: 21300000, guid: 48d0872e45f544c46a10a6100c562459, type: 3}

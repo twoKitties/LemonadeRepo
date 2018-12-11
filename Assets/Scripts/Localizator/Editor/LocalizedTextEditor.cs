@@ -6,6 +6,8 @@ public class LocalizedTextEditor : EditorWindow
 {
     public LocalizationData localizationData;
 
+    private Vector2 scrollPosition;
+
     [MenuItem("Window/Localized Text Editor")]
     private static void Init()
     {
@@ -16,10 +18,14 @@ public class LocalizedTextEditor : EditorWindow
     {
         if(localizationData != null)
         {
+            scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
             SerializedObject serializedObject = new SerializedObject(this);
             SerializedProperty serializedProperty = serializedObject.FindProperty("localizationData");
             EditorGUILayout.PropertyField(serializedProperty, true);
             serializedObject.ApplyModifiedProperties();
+
+            EditorGUILayout.BeginVertical();
 
             if (GUILayout.Button("Save Data"))
                 SaveGameData();
@@ -30,6 +36,9 @@ public class LocalizedTextEditor : EditorWindow
 
         if (GUILayout.Button("Create New Data"))
             CreateNewData();
+
+        EditorGUILayout.EndVertical();
+        EditorGUILayout.EndScrollView();
     }
 
     private void LoadGameData()

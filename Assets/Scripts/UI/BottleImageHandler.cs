@@ -9,7 +9,8 @@ public class BottleImageHandler : MonoBehaviour {
     private GameObject bottleButton;
     private Image imageComponent;
 
-    private string[] points = { "0", "5000", "10000", "15000", "20000", ""};
+    //private string[] points = { "0", "50", "100", "150", "200", ""};
+    private string[] points = { "0", "100", "150", "200", "210", "220", "230", "250", "260", "270", "" };
     private Text textComponentInChild;
 
     private void Awake()

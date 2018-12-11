@@ -15,22 +15,23 @@ MonoBehaviour:
   LabelKeyEng: Candies
   LabelKeyRu: "\u041A\u043E\u043D\u0444\u0435\u0442\u044B"
   DescriptionKeyEng:
-  - Candies0
-  - Candies1
-  - Candies2
-  - Candies3
-  - Candies4
+  - candies
+  - candy rocks
+  - sweety stars
+  - tutti frutti
+  - cherry sweets
   DescriptionKeyRu:
-  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B0"
-  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B1"
-  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B2"
-  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B3"
-  - "\u041A\u043E\u043D\u0444\u0435\u0442\u044B4"
+  - "\u043A\u043E\u043D\u0444\u0435\u0442\u044B"
+  - "\u043A\u043E\u043D\u0444\u0435\u0442\u043D\u044B\u0435 \u043A\u0430\u043C\u0443\u0448\u043A\u0438"
+  - "\u0441\u043B\u0430\u0434\u0435\u043D\u044C\u043A\u0438\u0435 \u0437\u0432\u0435\u0437\u0434\u043E\u0447\u043A\u0438"
+  - "\u0440\u043E\u0441\u0441\u044B\u043F\u044C \u043A\u043E\u043D\u0444\u0435\u0442
+    \u0430\u0441\u0441\u043E\u0440\u0442\u0438"
+  - "\u0432\u0438\u0448\u043D\u0435\u0432\u044B\u0435 \u0441\u043B\u0430\u0434\u043E\u0441\u0442\u0438"
   GradeImages:
-  - {fileID: 21300000, guid: 3f023c4bb0a2e5243980c8c0d1427c95, type: 3}
-  - {fileID: 21300000, guid: a4bcc259643833043ac8b057164fc207, type: 3}
-  - {fileID: 21300000, guid: 46e8bbf2e26969b429624cb52eb96aea, type: 3}
-  - {fileID: 21300000, guid: 51187a331326c9a428ef2b1c78663a6a, type: 3}
-  - {fileID: 21300000, guid: 4b0748f8ea8310d44a5d4a0e12c0a4ae, type: 3}
+  - {fileID: 21300000, guid: 8e65916b8c3a32e48ab34a1e91fe9ab6, type: 3}
+  - {fileID: 21300000, guid: 9ff7a1559f2bb3743aaeb119c11b960e, type: 3}
+  - {fileID: 21300000, guid: 328417f6fb3797e4593754046f09f9b6, type: 3}
+  - {fileID: 21300000, guid: 01c97bf3daf2e8b41b56c660a7ff70e5, type: 3}
+  - {fileID: 21300000, guid: 5f2d27c48194f134b8a9198bccb98369, type: 3}
   CurrentGradeID: 0
-  GradeCost: 000000000a000000140000001e00000028000000
+  GradeCost: 0000000032000000960000002c010000bc020000

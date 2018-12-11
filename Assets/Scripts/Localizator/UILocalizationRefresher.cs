@@ -19,7 +19,11 @@ public class UILocalizationRefresher : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
     }
-
+    public void CallOnLanguageChange()
+    {
+        if (OnLanguageChange != null)
+            OnLanguageChange();
+    }
     public IEnumerator WaitTilIsReady()
     {
         while (!LocalizationManager.Instance.GetIsReady())

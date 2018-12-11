@@ -149,6 +149,7 @@ public class InputController : MonoBehaviour {
             myTile.isDragged = false;
             isStuck = true;
             myTile.IsMoving = false;
+            TutorialEventList.CallOnGameTileSwaped();
         }
     }
 }

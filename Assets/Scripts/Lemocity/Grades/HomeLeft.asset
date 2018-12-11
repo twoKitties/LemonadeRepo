@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Name: HomeLeft
   m_EditorClassIdentifier: 
   GradeKey: homleft_key
-  LabelKeyEng: Home
-  LabelKeyRu: "\u0414\u043E\u043C"
+  LabelKeyEng: gift house
+  LabelKeyRu: "\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u044B\u0439 \u0434\u043E\u043C"
   DescriptionKeyEng:
-  - Home0
-  - Home1
-  - Home2
-  - Home3
-  - Home4
+  - house
+  - house
+  - gift house
+  - big gift house
+  - favourite gift house
   DescriptionKeyRu:
-  - "\u0414\u043E\u043C0"
-  - "\u0414\u043E\u043C1"
-  - "\u0414\u043E\u043C2"
-  - "\u0414\u043E\u043C3"
-  - "\u0414\u043E\u043C4"
+  - "\u0434\u043E\u043C"
+  - "\u0434\u043E\u043C"
+  - "\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u044B\u0439 \u0434\u043E\u043C\u0438\u043A"
+  - "\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u0434\u043E\u043C-\u043F\u043E\u0434\u0430\u0440\u043E\u043A"
+  - "\u043B\u044E\u0431\u0438\u043C\u044B\u0439 \u0434\u043E\u043C-\u043F\u043E\u0434\u0430\u0440\u043E\u043A"
   GradeImages:
   - {fileID: 21300000, guid: 1bebc1d1471432d47b9c08046d519536, type: 3}
   - {fileID: 21300000, guid: 705005ffbf1ab4344b8167d7b50f05bf, type: 3}
@@ -33,4 +33,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e109e62f1dd2b8346a1e13665d7433f1, type: 3}
   - {fileID: 21300000, guid: 745eeda86823cef498f9cb12388d68a5, type: 3}
   CurrentGradeID: 0
-  GradeCost: 000000000a000000140000001e00000028000000
+  GradeCost: 00000000c8000000f4010000e8030000d0070000

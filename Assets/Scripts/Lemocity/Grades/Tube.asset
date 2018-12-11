@@ -15,17 +15,17 @@ MonoBehaviour:
   LabelKeyEng: Tubes
   LabelKeyRu: "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
   DescriptionKeyEng:
-  - Tube0
-  - Tube1
-  - Tube2
-  - Tube3
-  - Tube4
+  - tubes
+  - jelly tubes
+  - waffle tubes
+  - caramel tubes
+  - sweet-sweet tubes
   DescriptionKeyRu:
-  - "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u04380"
-  - "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u04381"
-  - "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u04382"
-  - "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u04383"
-  - "\u0422\u0440\u0443\u0431\u043E\u0447\u043A\u04384"
+  - "\u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0436\u0435\u043B\u0435\u0439\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0432\u0430\u0444\u0435\u043B\u044C\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u043A\u0430\u0440\u0430\u043C\u0435\u043B\u044C\u043D\u044B\u0435 \u0442\u0440\u0443\u0431\u043E\u0447\u043A\u0438"
+  - "\u0442\u0440\u0443\u0431\u043A\u0438 \u0441\u043B\u0430\u0441\u0442\u0435\u043D\u044B"
   GradeImages:
   - {fileID: 21300000, guid: 2127680b065d09d4285b053f52764da6, type: 3}
   - {fileID: 21300000, guid: 7c0529e0b31e20049b4f0499145fef58, type: 3}
@@ -33,4 +33,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c99b33b55a36454f87469fdb5a466d8, type: 3}
   - {fileID: 21300000, guid: 740831a9932c674459a10809e34e0556, type: 3}
   CurrentGradeID: 0
-  GradeCost: 000000000a000000140000001e00000028000000
+  GradeCost: 000000001400000032000000780000002c010000
