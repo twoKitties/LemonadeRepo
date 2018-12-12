@@ -19,18 +19,16 @@ public class ItemsChecker : MonoBehaviour{
 
     private IEnumerator StoreInit()
     {
-#if UNITY_ANDROID || UNITY_IOS
         while (!CodelessIAPStoreListener.initializationComplete)
             yield return null;
 
         Product product = CodelessIAPStoreListener.Instance.GetProduct(GlobalConst.ITEM_ID_KEY);
-        if(product != null && product.hasReceipt)
+        if (product != null && product.hasReceipt)
         {
             shopController.BuyAllItems();
 
             adsController.DisableAds();
-            }
-#endif
+        }
     }
 
     public void SaveData()
@@ -38,3 +36,4 @@ public class ItemsChecker : MonoBehaviour{
         PlayerPrefsHelper.SetBool(GlobalConst.ITEM_PURCHASED_KEY, true);
     }
 }
+#endif

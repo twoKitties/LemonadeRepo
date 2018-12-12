@@ -29,13 +29,13 @@ public class ShopController : MonoBehaviour
         MoveFrame(PlayerPrefsHelper.GetInt(GlobalConst.CURRENT_COLOR_KEY));
     }
 
-    private IEnumerator WaitTilPurchasingLoaded()
-    {
-        while (!CodelessIAPStoreListener.initializationComplete)
-        {
-            yield return null;
-        }        
-    }
+    //private IEnumerator WaitTilPurchasingLoaded()
+    //{
+    //    while (!CodelessIAPStoreListener.initializationComplete)
+    //    {
+    //        yield return null;
+    //    }        
+    //}
 
     public void ResetActiveItems()
     {
