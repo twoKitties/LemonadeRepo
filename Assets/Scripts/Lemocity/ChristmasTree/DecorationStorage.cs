@@ -117,11 +117,11 @@ namespace LemonadeStore
             this.ID = ID;
             IsInitialized = true;
         }
-        public DecorationItem(bool state = false)
+        public DecorationItem(Sprite Sprite)
         {
-            Sprite = new Sprite();
+            this.Sprite = Sprite;
             ID = -1;
-            IsInitialized = state;
+            IsInitialized = false;
         }
     }
     [System.Serializable]
