@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Purchasing;
 
 public class ShopController : MonoBehaviour
 {    
@@ -30,7 +31,7 @@ public class ShopController : MonoBehaviour
 
     private IEnumerator WaitTilPurchasingLoaded()
     {
-        while (!UnityEngine.Purchasing.CodelessIAPStoreListener.initializationComplete)
+        while (!CodelessIAPStoreListener.initializationComplete)
         {
             yield return null;
         }        

@@ -19,9 +19,10 @@ public class ItemsChecker : MonoBehaviour{
 
     private IEnumerator StoreInit()
     {
+#if UNITY_ANDROID || UNITY_IOS
         while (!CodelessIAPStoreListener.initializationComplete)
             yield return null;
-#if UNITY_ANDROID || UNITY_IOS
+
         Product product = CodelessIAPStoreListener.Instance.GetProduct(GlobalConst.ITEM_ID_KEY);
         if(product != null && product.hasReceipt)
         {
@@ -30,7 +31,6 @@ public class ItemsChecker : MonoBehaviour{
             adsController.DisableAds();
             }
 #endif
-
     }
 
     public void SaveData()
