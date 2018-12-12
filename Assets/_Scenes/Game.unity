@@ -799,7 +799,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0.578}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -13042,7 +13042,7 @@ Prefab:
     - target: {fileID: 224716432823197558, guid: 562b62a5492763f41a875e5715ac104c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 22.4
+      value: 22.400024
       objectReference: {fileID: 0}
     - target: {fileID: 224716432823197558, guid: 562b62a5492763f41a875e5715ac104c,
         type: 2}
