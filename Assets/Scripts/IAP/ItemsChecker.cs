@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Purchasing;
 
+#if UNITY_ANDROID || UNITY_IOS
 public class ItemsChecker : MonoBehaviour{
 
     public ShopController shopController;
